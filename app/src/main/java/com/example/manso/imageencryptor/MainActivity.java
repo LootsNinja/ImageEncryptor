@@ -93,8 +93,6 @@ public class MainActivity extends AppCompatActivity {
                     requestRuntimePermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE, PERMISSION_REQUEST_CODE);
                 } else {
                 }
-
-
             }
         });
 
@@ -144,8 +142,6 @@ public class MainActivity extends AppCompatActivity {
                 } else{
                     Toast.makeText(MainActivity.this, "Please select an Image first!", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
 
@@ -153,10 +149,6 @@ public class MainActivity extends AppCompatActivity {
         /** Saving image */
         SaveImage.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-
-
-                //saveToInternalStorage(bitmapCopy);
-                //saveImage(getApplicationContext(),bitmapCopy,"Image.PNG");
                 FileOutputStream outStream = null;
                 if(targetImage.getDrawable() != null) {
                     // Write to SD Card
@@ -180,7 +172,6 @@ public class MainActivity extends AppCompatActivity {
                         String info = "Height = " + height + " pixels\nWidth = " + width + " pixels\nLast Operation: Save Image\nImage URI: " + textTargetURI;
                         Info.setText(info);
                         addImageGallery(outFile);
-
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                         Toast.makeText(MainActivity.this, "FileNotFoundException", Toast.LENGTH_SHORT).show();
@@ -192,9 +183,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Please select an Image first!", Toast.LENGTH_SHORT).show();
                 }
-
-                //Toast.makeText(MainActivity.this, "Image saved!", Toast.LENGTH_SHORT).show();
-
             }
         });
 
@@ -256,8 +244,6 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(MainActivity.this, "Please select an Image first!", Toast.LENGTH_SHORT).show();
                 }
-
-
             }
         });
 
@@ -318,7 +304,6 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 }
-
                 // Show result message.
                 Toast.makeText(getApplicationContext(), msgBuf.toString(), Toast.LENGTH_SHORT).show();
             }
